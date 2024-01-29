@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: f15d319a134644cfa9b7b4a4a1482db7
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nvar MoveDirection;\r\n(function
+    (MoveDirection) {\r\n    MoveDirection[MoveDirection[\"None\"] = 0] = \"None\";\r\n   
+    MoveDirection[MoveDirection[\"Up\"] = 1] = \"Up\";\r\n    MoveDirection[MoveDirection[\"Down\"]
+    = 2] = \"Down\";\r\n    MoveDirection[MoveDirection[\"Right\"] = 3] = \"Right\";\r\n   
+    MoveDirection[MoveDirection[\"Left\"] = 4] = \"Left\";\r\n})(MoveDirection ||
+    (MoveDirection = {}));\r\nclass VerticalMover extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.direction = MoveDirection.Up;\r\n    }\r\n   
+    FixedUpdate() {\r\n        var position = this.transform.position;\r\n       
+    if (this.direction == MoveDirection.Up) {\r\n            this.transform.Translate(new
+    UnityEngine_1.Vector3(0, UnityEngine_1.Time.deltaTime * this.speed, 0));\r\n       
+    }\r\n        else if (this.direction == MoveDirection.Down) {\r\n           
+    this.transform.Translate(new UnityEngine_1.Vector3(0, -UnityEngine_1.Time.deltaTime
+    * this.speed, 0));\r\n        }\r\n        if (position.y < this.minHeight) {\r\n           
+    this.direction = MoveDirection.Up;\r\n        }\r\n        else if (position.y
+    > this.maxHeight) {\r\n            this.direction = MoveDirection.Down;\r\n       
+    }\r\n    }\r\n}\r\nexports.default = VerticalMover;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVmVydGljYWxNb3Zlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlZlcnRpY2FsTW92ZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBNEM7QUFDNUMsaURBQXFEO0FBRXJELElBQUssYUFNSjtBQU5ELFdBQUssYUFBYTtJQUNkLGlEQUFJLENBQUE7SUFDSiw2Q0FBRSxDQUFBO0lBQ0YsaURBQUksQ0FBQTtJQUNKLG1EQUFLLENBQUE7SUFDTCxpREFBSSxDQUFBO0FBQ1IsQ0FBQyxFQU5JLGFBQWEsS0FBYixhQUFhLFFBTWpCO0FBRUQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQVE1RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFNBQVMsR0FBRyxhQUFhLENBQUMsRUFBRSxDQUFDO0lBQ3RDLENBQUM7SUFFRCxXQUFXO1FBQ1AsSUFBSSxRQUFRLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7UUFFdkMsSUFBSSxJQUFJLENBQUMsU0FBUyxJQUFJLGFBQWEsQ0FBQyxFQUFFLEVBQUU7WUFDcEMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBRSxrQkFBSSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUM7U0FDNUU7YUFBTSxJQUFJLElBQUksQ0FBQyxTQUFTLElBQUksYUFBYSxDQUFDLElBQUksRUFBRTtZQUM3QyxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFFLENBQUMsa0JBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLEtBQUssRUFBRSxDQUFDLENBQUMsQ0FBQyxDQUFDO1NBQzdFO1FBRUQsSUFBSSxRQUFRLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxTQUFTLEVBQUU7WUFDN0IsSUFBSSxDQUFDLFNBQVMsR0FBRyxhQUFhLENBQUMsRUFBRSxDQUFDO1NBQ3JDO2FBQU0sSUFBSSxRQUFRLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxTQUFTLEVBQUU7WUFDcEMsSUFBSSxDQUFDLFNBQVMsR0FBRyxhQUFhLENBQUMsSUFBSSxDQUFDO1NBQ3ZDO0lBQ0wsQ0FBQztDQUVKO0FBNUJELGdDQTRCQyJ9","assetPath":"Assets/Script/Complete/InfiniteStairs/VerticalMover.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"minHeight","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"maxHeight","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"VerticalMover","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 1ce592f3c67aa5e9c73cfbeeb17d040f
+  onlyWriteTrigger: 0
