@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358513536523301993, guid: 9b0380f331c194c7c9cfc8c6e5ccdc40, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5358513536523301993, guid: 9b0380f331c194c7c9cfc8c6e5ccdc40, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358513536523301995, guid: 9b0380f331c194c7c9cfc8c6e5ccdc40, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b0380f331c194c7c9cfc8c6e5ccdc40, type: 3}
@@ -310,11 +310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467297, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467299, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
@@ -380,11 +380,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467297, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467299, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
@@ -725,11 +725,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467297, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467299, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
@@ -795,7 +795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358513536523301993, guid: 9b0380f331c194c7c9cfc8c6e5ccdc40, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5358513536523301993, guid: 9b0380f331c194c7c9cfc8c6e5ccdc40, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -807,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5358513536523301995, guid: 9b0380f331c194c7c9cfc8c6e5ccdc40, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5358513536523301995, guid: 9b0380f331c194c7c9cfc8c6e5ccdc40, type: 3}
       propertyPath: m_IsActive
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 694197162}
   - component: {fileID: 694197161}
   - component: {fileID: 694197160}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,11 +1059,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467297, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467299, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
@@ -1082,7 +1082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187541936}
   - component: {fileID: 1187541935}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,7 +1174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1661853689}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2257119302874347137, guid: 1d85b0d6c7cfb418e8930bec2788a6c2, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2257119302874347137, guid: 1d85b0d6c7cfb418e8930bec2788a6c2, type: 3}
       propertyPath: m_IsActive
@@ -1331,11 +1331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467297, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1104409302283467299, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e142250cdfc2f497f84dc0fa47935f62, type: 3}
