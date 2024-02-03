@@ -22,7 +22,16 @@ ScriptedImporter:
     { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
     ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass CharacterPlayer extends
     ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.gameObject.layer
-    = UnityEngine_1.LayerMask.NameToLayer(\"Player\");\r\n    }\r\n}\r\nexports.default
-    = CharacterPlayer;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcmFjdGVyUGxheWVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2hhcmFjdGVyUGxheWVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXdDO0FBQ3hDLGlEQUFxRDtBQUVyRCxNQUFxQixlQUFnQixTQUFRLHFDQUFxQjtJQUU5RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFVBQVUsQ0FBQyxLQUFLLEdBQUcsdUJBQVMsQ0FBQyxXQUFXLENBQUMsUUFBUSxDQUFDLENBQUM7SUFDNUQsQ0FBQztDQUVKO0FBTkQsa0NBTUMifQ==","assetPath":"Assets/Script/Common/CharacterPlayer.ts","manifest":{"properties":[],"name":"CharacterPlayer","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: cbfc60d914bb8f22981bd9cf9445a510
+    = UnityEngine_1.LayerMask.NameToLayer(\"Player\");\r\n        this.characterController
+    = this.gameObject.GetComponent($typeof(UnityEngine_1.CharacterController));\r\n   
+    }\r\n    Update() {\r\n        var rayLength = this.characterController.height
+    * 0.5;\r\n        var ray = new UnityEngine_1.Ray(this.transform.position, UnityEngine_1.Vector3.down);\r\n       
+    var ref = $ref();\r\n        if (UnityEngine_1.Physics.Raycast(ray, ref, rayLength))
+    {\r\n            var hitInfo = $unref(ref);\r\n            var hitObj = hitInfo.collider.gameObject;\r\n           
+    if (hitObj.layer == UnityEngine_1.LayerMask.NameToLayer(\"Platform\")) {\r\n               
+    if (this.transform.parent != hitObj.transform) {\r\n                    this.transform.SetParent(hitObj.transform);\r\n               
+    }\r\n                return;\r\n            }\r\n        }\r\n        if (this.transform.parent
+    != null) {\r\n            this.transform.parent = null;\r\n        }\r\n    }\r\n}\r\nexports.default
+    = CharacterPlayer;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcmFjdGVyUGxheWVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2hhcmFjdGVyUGxheWVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQWdHO0FBQ2hHLGlEQUFxRDtBQUVyRCxNQUFxQixlQUFnQixTQUFRLHFDQUFxQjtJQUk5RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFVBQVUsQ0FBQyxLQUFLLEdBQUcsdUJBQVMsQ0FBQyxXQUFXLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDeEQsSUFBSSxDQUFDLG1CQUFtQixHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLGlDQUFtQixFQUFHLENBQUM7SUFDbkYsQ0FBQztJQUVELE1BQU07UUFDRixJQUFJLFNBQVMsR0FBRyxJQUFJLENBQUMsbUJBQW1CLENBQUMsTUFBTSxHQUFHLEdBQUcsQ0FBQztRQUN0RCxJQUFJLEdBQUcsR0FBRyxJQUFJLGlCQUFHLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUscUJBQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUN6RCxJQUFJLEdBQUcsR0FBRyxJQUFJLEVBQWMsQ0FBQztRQUM3QixJQUFJLHFCQUFPLENBQUMsT0FBTyxDQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsU0FBUyxDQUFDLEVBQUU7WUFDdEMsSUFBSSxPQUFPLEdBQUcsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDO1lBQzFCLElBQUksTUFBTSxHQUFHLE9BQU8sQ0FBQyxRQUFRLENBQUMsVUFBVSxDQUFDO1lBQ3pDLElBQUksTUFBTSxDQUFDLEtBQUssSUFBSSx1QkFBUyxDQUFDLFdBQVcsQ0FBQyxVQUFVLENBQUMsRUFBRTtnQkFDbkQsSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sSUFBSSxNQUFNLENBQUMsU0FBUyxFQUFFO29CQUMzQyxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUM7aUJBQzlDO2dCQUNELE9BQU87YUFDVjtTQUNKO1FBRUQsSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sSUFBSSxJQUFJLEVBQUU7WUFDL0IsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO1NBQ2hDO0lBQ0wsQ0FBQztDQUVKO0FBN0JELGtDQTZCQyJ9","assetPath":"Assets/Script/Common/CharacterPlayer.ts","manifest":{"properties":[],"name":"CharacterPlayer","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 432adbc2b4e6d54cb28005e58fa510c7
   onlyWriteTrigger: 0

@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: e38dddbcd93f74ca899ff894ab8866ce
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nvar MoveDirection;\r\n(function
+    (MoveDirection) {\r\n    MoveDirection[MoveDirection[\"Right\"] = 0] = \"Right\";\r\n   
+    MoveDirection[MoveDirection[\"Left\"] = 1] = \"Left\";\r\n    MoveDirection[MoveDirection[\"Up\"]
+    = 2] = \"Up\";\r\n    MoveDirection[MoveDirection[\"Down\"] = 3] = \"Down\";\r\n})(MoveDirection
+    || (MoveDirection = {}));\r\nclass HorizontalMover extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.direction = MoveDirection.Right;\r\n    }\r\n   
+    Update() {\r\n        if (this.direction == MoveDirection.Right) {\r\n           
+    this.transform.Translate(new UnityEngine_1.Vector3(UnityEngine_1.Time.deltaTime
+    * this.speed, 0, 0));\r\n        }\r\n        else if (this.direction == MoveDirection.Left)
+    {\r\n            this.transform.Translate(new UnityEngine_1.Vector3(-UnityEngine_1.Time.deltaTime
+    * this.speed, 0, 0));\r\n        }\r\n        if (this.transform.position.x >
+    this.maxX) {\r\n            this.direction = MoveDirection.Left;\r\n        }\r\n       
+    else if (this.transform.position.x < this.minX) {\r\n            this.direction
+    = MoveDirection.Right;\r\n        }\r\n    }\r\n}\r\nexports.default = HorizontalMover;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSG9yaXpvbnRhbE1vdmVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiSG9yaXpvbnRhbE1vdmVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTRDO0FBQzVDLGlEQUFxRDtBQUVyRCxJQUFLLGFBS0o7QUFMRCxXQUFLLGFBQWE7SUFDZCxtREFBSyxDQUFBO0lBQ0wsaURBQUksQ0FBQTtJQUNKLDZDQUFFLENBQUE7SUFDRixpREFBSSxDQUFBO0FBQ1IsQ0FBQyxFQUxJLGFBQWEsS0FBYixhQUFhLFFBS2pCO0FBRUQsTUFBcUIsZUFBZ0IsU0FBUSxxQ0FBcUI7SUFROUQsS0FBSztRQUNELElBQUksQ0FBQyxTQUFTLEdBQUcsYUFBYSxDQUFDLEtBQUssQ0FBQztJQUN6QyxDQUFDO0lBRUQsTUFBTTtRQUNGLElBQUksSUFBSSxDQUFDLFNBQVMsSUFBSSxhQUFhLENBQUMsS0FBSyxFQUFFO1lBQ3ZDLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLElBQUkscUJBQU8sQ0FBQyxrQkFBSSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQyxDQUFDO1NBQzVFO2FBQU0sSUFBSSxJQUFJLENBQUMsU0FBUyxJQUFJLGFBQWEsQ0FBQyxJQUFJLEVBQUU7WUFDN0MsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxxQkFBTyxDQUFDLENBQUMsa0JBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLEtBQUssRUFBRSxDQUFDLEVBQUUsQ0FBQyxDQUFDLENBQUMsQ0FBQztTQUM3RTtRQUVELElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxJQUFJLEVBQUU7WUFDdkMsSUFBSSxDQUFDLFNBQVMsR0FBRyxhQUFhLENBQUMsSUFBSSxDQUFDO1NBQ3ZDO2FBQU0sSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEdBQUcsSUFBSSxDQUFDLElBQUksRUFBRTtZQUM5QyxJQUFJLENBQUMsU0FBUyxHQUFHLGFBQWEsQ0FBQyxLQUFLLENBQUM7U0FDeEM7SUFFTCxDQUFDO0NBRUo7QUEzQkQsa0NBMkJDIn0=","assetPath":"Assets/Script/SugarLand/HorizontalMover.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"minX","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"maxX","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"HorizontalMover","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 0ed3218a2bb3023aa20402412a0159da
+  onlyWriteTrigger: 0
