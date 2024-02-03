@@ -14,11 +14,11 @@ export default class VerticalMover extends ZepetoScriptBehaviour {
         this.direction = MoveDirection.Up;
     }
 
-    Update() {
+    FixedUpdate() {
         if (this.direction == MoveDirection.Up) {
-            this.transform.Translate(new Vector3(0, Time.deltaTime * this.speed, 0));
+            this.transform.Translate(new Vector3(0, Time.fixedDeltaTime * this.speed, 0));
         } else if (this.direction == MoveDirection.Down) {
-            this.transform.Translate(new Vector3(0, -Time.deltaTime * this.speed, 0));
+            this.transform.Translate(new Vector3(0, -Time.fixedDeltaTime * this.speed, 0));
         }
 
         if (this.transform.position.y > this.maxY) {

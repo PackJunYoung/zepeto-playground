@@ -20,11 +20,11 @@ export default class HorizontalMover extends ZepetoScriptBehaviour {
         this.direction = MoveDirection.Right;
     }
 
-    Update() {
+    FixedUpdate() {
         if (this.direction == MoveDirection.Right) {
-            this.transform.Translate(new Vector3(Time.deltaTime * this.speed, 0, 0));
+            this.transform.Translate(new Vector3(Time.fixedDeltaTime * this.speed, 0, 0));
         } else if (this.direction == MoveDirection.Left) {
-            this.transform.Translate(new Vector3(-Time.deltaTime * this.speed, 0, 0));
+            this.transform.Translate(new Vector3(-Time.fixedDeltaTime * this.speed, 0, 0));
         }
 
         if (this.transform.position.x > this.maxX) {
@@ -32,7 +32,6 @@ export default class HorizontalMover extends ZepetoScriptBehaviour {
         } else if (this.transform.position.x < this.minX) {
             this.direction = MoveDirection.Right;
         }
-
     }
 
 }
