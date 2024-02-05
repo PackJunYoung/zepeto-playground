@@ -1,4 +1,4 @@
-import { LayerMask, Physics, Ray, RaycastHit, Vector3 } from 'UnityEngine';
+import { LayerMask, Physics, Quaternion, Ray, RaycastHit, Transform, Vector3, WaitForEndOfFrame, WaitForSeconds } from 'UnityEngine';
 import { ZepetoCharacter } from 'ZEPETO.Character.Controller';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { Content } from 'ZEPETO.World';
@@ -67,6 +67,16 @@ export default class CharacterPlayer extends ZepetoScriptBehaviour {
         } else {
             this.zepetoCharacter.SetGesture(content.AnimationClip);
         }
+    }
+
+    public InteractionFurniture(gestureId: string, pivot: Transform) {
+        this.StartCoroutine(this.Interaction(gestureId, pivot));
+    }
+
+    private *Interaction(gestureId: string, pivot: Transform) {
+        this.zepetoCharacter.Teleport(pivot.position, pivot.rotation);
+        yield new WaitForSeconds(0.3);
+        this.PlayGestureWithId(gestureId);
     }
 
 }

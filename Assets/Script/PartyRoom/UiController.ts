@@ -13,14 +13,18 @@ export default class UiController extends ZepetoScriptBehaviour {
     public feedScreenShotBtn: Button;
     public playGestureBtn: Button;
     public stopGestureBtn: Button;
+    public interactionBtn: Button;
 
     private characterPlayer: CharacterPlayer;
+    private furnitureAction: () => void;
 
     Awake() {
         UiController.instance = this;
     }
 
     Start() {    
+        this.interactionBtn.interactable = false;
+
         ScreenShotController.instance.SetCallback((result: string) => {
             this.resultMessage.text = result;
         });
@@ -40,10 +44,25 @@ export default class UiController extends ZepetoScriptBehaviour {
         this.stopGestureBtn.onClick.AddListener(() => {
             this.characterPlayer.StopGesture();
         });
+        this.interactionBtn.onClick.AddListener(() => {
+            if (this.furnitureAction != null) {
+                this.furnitureAction();
+            }
+        });
     }
 
     public SetCharacterPlayer(characterPlayer: CharacterPlayer) {
         this.characterPlayer = characterPlayer;
+    }
+
+    public OnEnterFurniture(furnitureAction: () => void) {
+        this.interactionBtn.interactable = true;
+        this.furnitureAction = furnitureAction;
+    }
+
+    public OnExitFurniture() {
+        this.interactionBtn.interactable = false;
+        this.furnitureAction = null;
     }
 
 }

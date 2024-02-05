@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: aa400a7964f264d1091977f7128d0a2d
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    AudioController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Awake()
+    {\r\n        AudioController.instance = this;\r\n    }\r\n    PlaySound(clip)
+    {\r\n        this.soundSource.clip = clip;\r\n        this.soundSource.Play();\r\n   
+    }\r\n    PlayBgm(clip) {\r\n        this.bgmSource.clip = clip;\r\n        this.bgmSource.loop
+    = true;\r\n        this.bgmSource.Play();\r\n    }\r\n}\r\nexports.default =
+    AudioController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQXVkaW9Db250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQXVkaW9Db250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBRXJELE1BQXFCLGVBQWdCLFNBQVEscUNBQXFCO0lBTzlELEtBQUs7UUFDRCxlQUFlLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztJQUNwQyxDQUFDO0lBRU0sU0FBUyxDQUFDLElBQWU7UUFDNUIsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQzdCLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxFQUFFLENBQUM7SUFDNUIsQ0FBQztJQUVNLE9BQU8sQ0FBQyxJQUFlO1FBQzFCLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztRQUMzQixJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksR0FBRyxJQUFJLENBQUM7UUFDM0IsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUMxQixDQUFDO0NBRUo7QUF0QkQsa0NBc0JDIn0=","assetPath":"Assets/Script/PartyRoom/AudioController.ts","manifest":{"properties":[{"assembly":"UnityEngine.AudioModule","name":"soundSource","type":"UnityEngine.AudioSource","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.AudioModule","name":"bgmSource","type":"UnityEngine.AudioSource","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"AudioController","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 10a8f75da37130ed4dd1a763a99f04da
+  onlyWriteTrigger: 0
