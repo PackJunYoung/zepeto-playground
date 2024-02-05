@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 2b448e22072b048ef9f6a79b2067ab4c
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ScreenShotController_1 = require(\"./ScreenShotController\");\r\nclass UiController
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Awake() {\r\n        UiController.instance
+    = this;\r\n    }\r\n    Start() {\r\n        ScreenShotController_1.default.instance.SetCallback((result)
+    => {\r\n            this.resultMessage.text = result;\r\n        });\r\n       
+    this.saveScreenShotBtn.onClick.AddListener(() => {\r\n            ScreenShotController_1.default.instance.SaveScreenShot();\r\n       
+    });\r\n        this.shareScreenShotBtn.onClick.AddListener(() => {\r\n           
+    ScreenShotController_1.default.instance.ShareScreenShot();\r\n        });\r\n       
+    this.feedScreenShotBtn.onClick.AddListener(() => {\r\n            ScreenShotController_1.default.instance.FeedScreenShot();\r\n       
+    });\r\n        this.playGestureBtn.onClick.AddListener(() => {\r\n           
+    // this.characterPlayer.PlayRandomGesture();\r\n            this.characterPlayer.PlayGestureWithId(\"ZW_POSE_063\");\r\n       
+    });\r\n        this.stopGestureBtn.onClick.AddListener(() => {\r\n           
+    this.characterPlayer.StopGesture();\r\n        });\r\n    }\r\n    SetCharacterPlayer(characterPlayer)
+    {\r\n        this.characterPlayer = characterPlayer;\r\n    }\r\n}\r\nexports.default
+    = UiController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVWlDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVWlDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBQ3JELGlFQUEwRDtBQUcxRCxNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBYTNELEtBQUs7UUFDRCxZQUFZLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztJQUNqQyxDQUFDO0lBRUQsS0FBSztRQUNELDhCQUFvQixDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsQ0FBQyxNQUFjLEVBQUUsRUFBRTtZQUN6RCxJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksR0FBRyxNQUFNLENBQUM7UUFDckMsQ0FBQyxDQUFDLENBQUM7UUFDSCxJQUFJLENBQUMsaUJBQWlCLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDNUMsOEJBQW9CLENBQUMsUUFBUSxDQUFDLGNBQWMsRUFBRSxDQUFDO1FBQ25ELENBQUMsQ0FBQyxDQUFDO1FBQ0gsSUFBSSxDQUFDLGtCQUFrQixDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQzdDLDhCQUFvQixDQUFDLFFBQVEsQ0FBQyxlQUFlLEVBQUUsQ0FBQztRQUNwRCxDQUFDLENBQUMsQ0FBQztRQUNILElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUM1Qyw4QkFBb0IsQ0FBQyxRQUFRLENBQUMsY0FBYyxFQUFFLENBQUM7UUFDbkQsQ0FBQyxDQUFDLENBQUM7UUFDSCxJQUFJLENBQUMsY0FBYyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3pDLDRDQUE0QztZQUM1QyxJQUFJLENBQUMsZUFBZSxDQUFDLGlCQUFpQixDQUFDLGFBQWEsQ0FBQyxDQUFDO1FBQzFELENBQUMsQ0FBQyxDQUFDO1FBQ0gsSUFBSSxDQUFDLGNBQWMsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN6QyxJQUFJLENBQUMsZUFBZSxDQUFDLFdBQVcsRUFBRSxDQUFDO1FBQ3ZDLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVNLGtCQUFrQixDQUFDLGVBQWdDO1FBQ3RELElBQUksQ0FBQyxlQUFlLEdBQUcsZUFBZSxDQUFDO0lBQzNDLENBQUM7Q0FFSjtBQTNDRCwrQkEyQ0MifQ==","assetPath":"Assets/Script/PartyRoom/UiController.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"resultMessage","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"saveScreenShotBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"shareScreenShotBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"feedScreenShotBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"playGestureBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"stopGestureBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UiController","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 940252cbdbb725e8587823846aaa0aa0
+  onlyWriteTrigger: 0

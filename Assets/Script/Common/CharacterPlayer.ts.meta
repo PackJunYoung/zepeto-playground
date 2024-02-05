@@ -18,18 +18,33 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass CharacterPlayer extends
-    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.gameObject.layer
-    = UnityEngine_1.LayerMask.NameToLayer(\"Player\");\r\n    }\r\n    FixedUpdate()
-    {\r\n        var ray = new UnityEngine_1.Ray(this.transform.position, UnityEngine_1.Vector3.down);\r\n       
-    var ref = $ref();\r\n        if (UnityEngine_1.Physics.Raycast(ray, ref, 1))
-    {\r\n            var hitInfo = $unref(ref);\r\n            var hitObj = hitInfo.collider.gameObject;\r\n           
-    if (hitObj.layer == UnityEngine_1.LayerMask.NameToLayer(\"Platform\")) {\r\n               
-    if (this.transform.parent != hitObj.transform) {\r\n                    this.transform.SetParent(hitObj.transform);\r\n               
-    }\r\n                return;\r\n            }\r\n        }\r\n        if (this.transform.parent
-    != null) {\r\n            this.transform.parent = null;\r\n        }\r\n    }\r\n}\r\nexports.default
-    = CharacterPlayer;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcmFjdGVyUGxheWVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2hhcmFjdGVyUGxheWVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQWdHO0FBQ2hHLGlEQUFxRDtBQUVyRCxNQUFxQixlQUFnQixTQUFRLHFDQUFxQjtJQUU5RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFVBQVUsQ0FBQyxLQUFLLEdBQUcsdUJBQVMsQ0FBQyxXQUFXLENBQUMsUUFBUSxDQUFDLENBQUM7SUFDNUQsQ0FBQztJQUVELFdBQVc7UUFDUCxJQUFJLEdBQUcsR0FBRyxJQUFJLGlCQUFHLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUscUJBQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUN6RCxJQUFJLEdBQUcsR0FBRyxJQUFJLEVBQWMsQ0FBQztRQUM3QixJQUFJLHFCQUFPLENBQUMsT0FBTyxDQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsQ0FBQyxDQUFDLEVBQUU7WUFDOUIsSUFBSSxPQUFPLEdBQUcsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDO1lBQzFCLElBQUksTUFBTSxHQUFHLE9BQU8sQ0FBQyxRQUFRLENBQUMsVUFBVSxDQUFDO1lBQ3pDLElBQUksTUFBTSxDQUFDLEtBQUssSUFBSSx1QkFBUyxDQUFDLFdBQVcsQ0FBQyxVQUFVLENBQUMsRUFBRTtnQkFDbkQsSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sSUFBSSxNQUFNLENBQUMsU0FBUyxFQUFFO29CQUMzQyxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUM7aUJBQzlDO2dCQUNELE9BQU87YUFDVjtTQUNKO1FBRUQsSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sSUFBSSxJQUFJLEVBQUU7WUFDL0IsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO1NBQ2hDO0lBQ0wsQ0FBQztDQUVKO0FBekJELGtDQXlCQyJ9","assetPath":"Assets/Script/Common/CharacterPlayer.ts","manifest":{"properties":[],"name":"CharacterPlayer","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 5e22d408f4e44e12212599159969912f
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass CharacterPlayer
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n       
+    this.zepetoCharacter = this.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\\r\\n       
+    this.gameObject.layer = UnityEngine_1.LayerMask.NameToLayer(\\\"Player\\\");\\r\\n   
+    }\\r\\n    FixedUpdate() {\\r\\n        var ray = new UnityEngine_1.Ray(this.transform.position,
+    UnityEngine_1.Vector3.down);\\r\\n        var ref = $ref();\\r\\n        if (UnityEngine_1.Physics.Raycast(ray,
+    ref, 1)) {\\r\\n            var hitInfo = $unref(ref);\\r\\n            var hitObj
+    = hitInfo.collider.gameObject;\\r\\n            if (hitObj.layer == UnityEngine_1.LayerMask.NameToLayer(\\\"Platform\\\"))
+    {\\r\\n                if (this.transform.parent != hitObj.transform) {\\r\\n                   
+    this.transform.SetParent(hitObj.transform);\\r\\n                }\\r\\n               
+    return;\\r\\n            }\\r\\n        }\\r\\n        if (this.transform.parent
+    != null) {\\r\\n            this.transform.parent = null;\\r\\n        }\\r\\n   
+    }\\r\\n    SetContents(contents) {\\r\\n        this.contents = contents;\\r\\n   
+    }\\r\\n    PlayRandomGesture() {\\r\\n        var randomIndex = Math.floor(Math.random()
+    * this.contents.length);\\r\\n        var randomContent = this.contents[randomIndex];\\r\\n       
+    this.PlayGesture(randomContent);\\r\\n    }\\r\\n    StopGesture() {\\r\\n       
+    this.zepetoCharacter.CancelGesture();\\r\\n    }\\r\\n    PlayGestureWithId(id)
+    {\\r\\n        // \uC549\uAE30: ZW_POSE_063 ~ 065\\r\\n        var filteredContents
+    = this.contents.filter(content => content.Id == id);\\r\\n        if (filteredContents.length
+    > 0) {\\r\\n            this.PlayGesture(filteredContents[0]);\\r\\n        }\\r\\n       
+    else {\\r\\n            this.PlayRandomGesture();\\r\\n        }\\r\\n    }\\r\\n   
+    PlayGesture(content) {\\r\\n        if (!content.IsDownloadedAnimation) {\\r\\n           
+    content.DownloadAnimation(() => {\\r\\n                this.zepetoCharacter.SetGesture(content.AnimationClip);\\r\\n           
+    });\\r\\n        }\\r\\n        else {\\r\\n            this.zepetoCharacter.SetGesture(content.AnimationClip);\\r\\n       
+    }\\r\\n    }\\r\\n}\\r\\nexports.default = CharacterPlayer;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcmFjdGVyUGxheWVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2hhcmFjdGVyUGxheWVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTJFO0FBQzNFLDZFQUE4RDtBQUM5RCxpREFBcUQ7QUFHckQsTUFBcUIsZUFBZ0IsU0FBUSxxQ0FBcUI7SUFLOUQsS0FBSztRQUNELElBQUksQ0FBQyxlQUFlLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1FBQ3ZFLElBQUksQ0FBQyxVQUFVLENBQUMsS0FBSyxHQUFHLHVCQUFTLENBQUMsV0FBVyxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBQzVELENBQUM7SUFFRCxXQUFXO1FBQ1AsSUFBSSxHQUFHLEdBQUcsSUFBSSxpQkFBRyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFFLHFCQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDekQsSUFBSSxHQUFHLEdBQUcsSUFBSSxFQUFjLENBQUM7UUFDN0IsSUFBSSxxQkFBTyxDQUFDLE9BQU8sQ0FBQyxHQUFHLEVBQUUsR0FBRyxFQUFFLENBQUMsQ0FBQyxFQUFFO1lBQzlCLElBQUksT0FBTyxHQUFHLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQztZQUMxQixJQUFJLE1BQU0sR0FBRyxPQUFPLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQztZQUN6QyxJQUFJLE1BQU0sQ0FBQyxLQUFLLElBQUksdUJBQVMsQ0FBQyxXQUFXLENBQUMsVUFBVSxDQUFDLEVBQUU7Z0JBQ25ELElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLElBQUksTUFBTSxDQUFDLFNBQVMsRUFBRTtvQkFDM0MsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxDQUFDO2lCQUM5QztnQkFDRCxPQUFPO2FBQ1Y7U0FDSjtRQUVELElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLElBQUksSUFBSSxFQUFFO1lBQy9CLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQztTQUNoQztJQUNMLENBQUM7SUFFTSxXQUFXLENBQUMsUUFBbUI7UUFDbEMsSUFBSSxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUM7SUFDN0IsQ0FBQztJQUVNLGlCQUFpQjtRQUNwQixJQUFJLFdBQVcsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBQ25FLElBQUksYUFBYSxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLENBQUM7UUFFL0MsSUFBSSxDQUFDLFdBQVcsQ0FBQyxhQUFhLENBQUMsQ0FBQztJQUNwQyxDQUFDO0lBRU0sV0FBVztRQUNkLElBQUksQ0FBQyxlQUFlLENBQUMsYUFBYSxFQUFFLENBQUM7SUFDekMsQ0FBQztJQUVNLGlCQUFpQixDQUFDLEVBQVU7UUFDL0Isd0JBQXdCO1FBQ3hCLElBQUksZ0JBQWdCLEdBQUcsSUFBSSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsT0FBTyxDQUFDLEVBQUUsQ0FBQyxPQUFPLENBQUMsRUFBRSxJQUFJLEVBQUUsQ0FBQyxDQUFDO1FBQ3pFLElBQUksZ0JBQWdCLENBQUMsTUFBTSxHQUFHLENBQUMsRUFBRTtZQUM3QixJQUFJLENBQUMsV0FBVyxDQUFDLGdCQUFnQixDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7U0FDekM7YUFBTTtZQUNILElBQUksQ0FBQyxpQkFBaUIsRUFBRSxDQUFDO1NBQzVCO0lBQ0wsQ0FBQztJQUVPLFdBQVcsQ0FBQyxPQUFnQjtRQUNoQyxJQUFJLENBQUMsT0FBTyxDQUFDLHFCQUFxQixFQUFFO1lBQ2hDLE9BQU8sQ0FBQyxpQkFBaUIsQ0FBQyxHQUFHLEVBQUU7Z0JBQzNCLElBQUksQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFDLE9BQU8sQ0FBQyxhQUFhLENBQUMsQ0FBQztZQUMzRCxDQUFDLENBQUMsQ0FBQztTQUNOO2FBQU07WUFDSCxJQUFJLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsYUFBYSxDQUFDLENBQUM7U0FDMUQ7SUFDTCxDQUFDO0NBRUo7QUFoRUQsa0NBZ0VDIn0=\",\"assetPath\":\"Assets/Script/Common/CharacterPlayer.ts\",\"manifest\":{\"properties\":[],\"name\":\"CharacterPlayer\",\"description\":\"\",\"hasAnimatorMove\":false},\"isCompiled\":true}"
+  typescriptHash: 758b9c74e04da7bdcb47c7de605424e6
   onlyWriteTrigger: 0

@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: 5034b11f3a37145668e5cc2734d6bea2
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nvar
+    ScreenShotType;\r\n(function (ScreenShotType) {\r\n    ScreenShotType[ScreenShotType[\"Save\"]
+    = 0] = \"Save\";\r\n    ScreenShotType[ScreenShotType[\"Share\"] = 1] = \"Share\";\r\n   
+    ScreenShotType[ScreenShotType[\"Feed\"] = 2] = \"Feed\";\r\n})(ScreenShotType
+    || (ScreenShotType = {}));\r\nclass ScreenShotController extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Awake() {\r\n        ScreenShotController.instance = this;\r\n    }\r\n   
+    SetCamera(camera) {\r\n        this.camera = camera;\r\n    }\r\n    SetCallback(callback)
+    {\r\n        this.callback = callback;\r\n    }\r\n    SaveScreenShot() {\r\n       
+    this.callback(\"waiting...\");\r\n        this.StartCoroutine(this.RenderTargetTexture(ScreenShotType.Save));\r\n   
+    }\r\n    ShareScreenShot() {\r\n        this.callback(\"waiting...\");\r\n       
+    this.StartCoroutine(this.RenderTargetTexture(ScreenShotType.Share));\r\n    }\r\n   
+    FeedScreenShot() {\r\n        this.callback(\"waiting...\");\r\n        this.StartCoroutine(this.RenderTargetTexture(ScreenShotType.Feed));\r\n   
+    }\r\n    *RenderTargetTexture(type) {\r\n        this.camera.targetTexture =
+    this.renderTexture;\r\n        yield new UnityEngine_1.WaitForEndOfFrame();\r\n       
+    this.camera.Render();\r\n        this.camera.targetTexture = null;\r\n       
+    if (type == ScreenShotType.Save) {\r\n            this.SaveToCameraRoll();\r\n       
+    }\r\n        else if (type == ScreenShotType.Share) {\r\n            this.Share();\r\n       
+    }\r\n        else if (type == ScreenShotType.Feed) {\r\n            this.CreateFeed();\r\n       
+    }\r\n    }\r\n    SaveToCameraRoll() {\r\n        ZEPETO_World_1.ZepetoWorldContent.SaveToCameraRoll(this.renderTexture,
+    (result) => {\r\n            this.callback(result.toString());\r\n        });\r\n   
+    }\r\n    Share() {\r\n        ZEPETO_World_1.ZepetoWorldContent.Share(this.renderTexture,
+    (result) => {\r\n            this.callback(result.toString());\r\n        });\r\n   
+    }\r\n    CreateFeed() {\r\n        ZEPETO_World_1.ZepetoWorldContent.CreateFeed(this.renderTexture,
+    \"[content]\", (result) => {\r\n            this.callback(result.toString());\r\n       
+    });\r\n    }\r\n}\r\nexports.default = ScreenShotController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2NyZWVuU2hvdENvbnRyb2xsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTY3JlZW5TaG90Q29udHJvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFzRTtBQUN0RSxpREFBcUQ7QUFDckQsK0NBQWlEO0FBRWpELElBQUssY0FJSjtBQUpELFdBQUssY0FBYztJQUNmLG1EQUFJLENBQUE7SUFDSixxREFBSyxDQUFBO0lBQ0wsbURBQUksQ0FBQTtBQUNSLENBQUMsRUFKSSxjQUFjLEtBQWQsY0FBYyxRQUlsQjtBQUVELE1BQXFCLG9CQUFxQixTQUFRLHFDQUFxQjtJQVNuRSxLQUFLO1FBQ0Qsb0JBQW9CLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztJQUN6QyxDQUFDO0lBRU0sU0FBUyxDQUFDLE1BQWM7UUFDM0IsSUFBSSxDQUFDLE1BQU0sR0FBRyxNQUFNLENBQUM7SUFDekIsQ0FBQztJQUVNLFdBQVcsQ0FBQyxRQUFrQztRQUNqRCxJQUFJLENBQUMsUUFBUSxHQUFHLFFBQVEsQ0FBQztJQUM3QixDQUFDO0lBRU0sY0FBYztRQUNqQixJQUFJLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQyxDQUFDO1FBQzVCLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLG1CQUFtQixDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDO0lBQ3ZFLENBQUM7SUFFTSxlQUFlO1FBQ2xCLElBQUksQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLENBQUM7UUFDNUIsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsbUJBQW1CLENBQUMsY0FBYyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUM7SUFDeEUsQ0FBQztJQUVNLGNBQWM7UUFDakIsSUFBSSxDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsQ0FBQztRQUM1QixJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxtQkFBbUIsQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQztJQUN2RSxDQUFDO0lBRU8sQ0FBQyxtQkFBbUIsQ0FBQyxJQUFvQjtRQUM3QyxJQUFJLENBQUMsTUFBTSxDQUFDLGFBQWEsR0FBRyxJQUFJLENBQUMsYUFBYSxDQUFDO1FBQy9DLE1BQU0sSUFBSSwrQkFBaUIsRUFBRSxDQUFDO1FBQzlCLElBQUksQ0FBQyxNQUFNLENBQUMsTUFBTSxFQUFFLENBQUM7UUFDckIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFDO1FBRWpDLElBQUksSUFBSSxJQUFJLGNBQWMsQ0FBQyxJQUFJLEVBQUU7WUFDN0IsSUFBSSxDQUFDLGdCQUFnQixFQUFFLENBQUM7U0FDM0I7YUFBTSxJQUFJLElBQUksSUFBSSxjQUFjLENBQUMsS0FBSyxFQUFFO1lBQ3JDLElBQUksQ0FBQyxLQUFLLEVBQUUsQ0FBQztTQUNoQjthQUFNLElBQUksSUFBSSxJQUFJLGNBQWMsQ0FBQyxJQUFJLEVBQUU7WUFDcEMsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFDO1NBQ3JCO0lBQ0wsQ0FBQztJQUVPLGdCQUFnQjtRQUNwQixpQ0FBa0IsQ0FBQyxnQkFBZ0IsQ0FBQyxJQUFJLENBQUMsYUFBYSxFQUFFLENBQUMsTUFBZSxFQUFFLEVBQUU7WUFDeEUsSUFBSSxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsUUFBUSxFQUFFLENBQUMsQ0FBQztRQUNyQyxDQUFDLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFTyxLQUFLO1FBQ1QsaUNBQWtCLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsQ0FBQyxNQUFlLEVBQUUsRUFBRTtZQUM3RCxJQUFJLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxRQUFRLEVBQUUsQ0FBQyxDQUFDO1FBQ3JDLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVPLFVBQVU7UUFDZCxpQ0FBa0IsQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLGFBQWEsRUFBRSxXQUFXLEVBQUUsQ0FBQyxNQUFlLEVBQUUsRUFBRTtZQUMvRSxJQUFJLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxRQUFRLEVBQUUsQ0FBQyxDQUFDO1FBQ3JDLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztDQUVKO0FBckVELHVDQXFFQyJ9","assetPath":"Assets/Script/PartyRoom/ScreenShotController.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"renderTexture","type":"UnityEngine.RenderTexture","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ScreenShotController","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 8ded29cf65732c060a20a3e964023359
+  onlyWriteTrigger: 0
