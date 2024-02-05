@@ -25,6 +25,15 @@
       },
       "url": "https://upm.zepeto.run"
     },
+    "asset.partyroom": {
+      "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "asset.commons": "1.0.6"
+      },
+      "url": "https://upm.zepeto.run"
+    },
     "asset.sugarland": {
       "version": "1.0.3",
       "depth": 0,

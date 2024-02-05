@@ -2,6 +2,7 @@
   "dependencies": {
     "asset.effect": "1.0.1",
     "asset.mysteryhouse": "1.0.1",
+    "asset.partyroom": "1.0.2",
     "asset.sugarland": "1.0.3",
     "com.unity.collab-proxy": "1.3.9",
     "com.unity.ide.rider": "2.0.7",

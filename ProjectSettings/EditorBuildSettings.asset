@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/SugarLand.unity
-    guid: 4d97345be5172413ea199891defb25f3
+    path: Assets/Scene/PartyRoom.unity
+    guid: 8aecf564880d244c5aa331b861f8f6f6
   m_configObjects: {}
