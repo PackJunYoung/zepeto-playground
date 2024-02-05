@@ -48,7 +48,9 @@ export default class CharacterPlayer extends ZepetoScriptBehaviour {
     }
 
     public PlayGestureWithId(id: string) {
-        // 앉기: ZW_POSE_063 ~ 065
+        // 쿠션에 앉기: ZW_POSE_012
+        // 의자에 앉기: ZW_POSE_063
+        // 눕기: ZW_POSE_040
         var filteredContents = this.contents.filter(content => content.Id == id);
         if (filteredContents.length > 0) {
             this.PlayGesture(filteredContents[0]);

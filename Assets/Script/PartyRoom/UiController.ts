@@ -34,8 +34,8 @@ export default class UiController extends ZepetoScriptBehaviour {
             ScreenShotController.instance.FeedScreenShot();
         });
         this.playGestureBtn.onClick.AddListener(() => {
-            // this.characterPlayer.PlayRandomGesture();
-            this.characterPlayer.PlayGestureWithId("ZW_POSE_063");
+            this.characterPlayer.PlayRandomGesture();
+            // this.characterPlayer.PlayGestureWithId("ZW_POSE_040");
         });
         this.stopGestureBtn.onClick.AddListener(() => {
             this.characterPlayer.StopGesture();
