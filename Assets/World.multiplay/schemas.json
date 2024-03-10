@@ -1,0 +1,6 @@
+{
+"State" : {"players" : {"map" : "Player"},"items" : {"map" : "Vector3"}},
+"Vector3" : {"x" : "number","y" : "number","z" : "number"},
+"Transform" : {"position" : "Vector3","rotation" : "Vector3"},
+"Player" : {"sessionId" : "string","zepetoUserId" : "string","transform" : "Transform","state" : "number","subState" : "number"}
+}

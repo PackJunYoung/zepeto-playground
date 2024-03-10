@@ -4,16 +4,21 @@
 		{
 			"name": "Zepeto Script",
 			"address": "127.0.0.1",
-			"port": 58721,
+			"port": 59266,
 			"request": "attach",
 			"type": "pwa-node"
 		},
 		{
 			"name": "Zepeto Multiplay Script",
 			"address": "127.0.0.1",
-			"port": 58722,
+			"port": 59267,
 			"request": "attach",
 			"type": "pwa-node"
+		},
+		{
+			"name": "Attach to Unity",
+			"type": "vstuc",
+			"request": "attach"
 		}
 	],
 	"compounds": [

@@ -146,7 +146,9 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.junyoungp.hello.world
     Standalone: com.junyoungp.hello.world
+    iPhone: com.junyoungp.hello.world
   buildNumber:
     Standalone: 0
     iPhone: 0

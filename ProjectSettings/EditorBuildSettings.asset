@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/PartyRoom.unity
-    guid: 8aecf564880d244c5aa331b861f8f6f6
+    path: Assets/Scene/ThemePark.unity
+    guid: cb5e140a529304705b0f9d2181bb0a64
   m_configObjects: {}

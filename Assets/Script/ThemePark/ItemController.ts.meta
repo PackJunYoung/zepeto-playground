@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: c4bdb19e0bb8c4cc0837f83bfa403ee5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine = require(\"UnityEngine\");\r\nconst GiftItem_1 = require(\"./GiftItem\");\r\nclass
+    ItemController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.currentItems = new Map();\r\n   
+    }\r\n    Awake() {\r\n        ItemController.instance = this;\r\n        this.prefab
+    = UnityEngine_1.Resources.Load(\"item\");\r\n    }\r\n    OnStateChange(items)
+    {\r\n        var create = new Map();\r\n        var remove = new Map(this.currentItems);\r\n       
+    items.ForEach((id, pos) => {\r\n            if (!this.currentItems.has(id)) {\r\n               
+    create.set(id, pos);\r\n            }\r\n            remove.delete(id);\r\n       
+    });\r\n        create.forEach((pos, id) => this.OnCreateItem(id, pos));\r\n       
+    remove.forEach((obj, id) => this.OnRemoveItem(id, obj));\r\n    }\r\n    OnCreateItem(id,
+    pos) {\r\n        var obj = UnityEngine_1.GameObject.Instantiate(this.prefab,
+    new UnityEngine.Vector3(pos.x, pos.y, pos.z), UnityEngine.Quaternion.identity,
+    this.transform);\r\n        var item = obj.GetComponent($typeof(GiftItem_1.default));\r\n       
+    item.Init(id);\r\n        this.currentItems.set(id, obj);\r\n    }\r\n    OnRemoveItem(id,
+    obj) {\r\n        if (__UnityEngine__.Object.op_Inequality(obj, null))\r\n           
+    UnityEngine_1.GameObject.DestroyImmediate(obj);\r\n        this.currentItems.delete(id);\r\n   
+    }\r\n}\r\nexports.default = ItemController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSXRlbUNvbnRyb2xsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJJdGVtQ29udHJvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSw2Q0FBb0Q7QUFFcEQsaURBQXFEO0FBRXJELDJDQUEyQztBQUMzQyx5Q0FBa0M7QUFFbEMsTUFBcUIsY0FBZSxTQUFRLHFDQUFxQjtJQUFqRTs7UUFLWSxpQkFBWSxHQUE0QixJQUFJLEdBQUcsRUFBc0IsQ0FBQztJQW9DbEYsQ0FBQztJQWxDRyxLQUFLO1FBQ0QsY0FBYyxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7UUFFL0IsSUFBSSxDQUFDLE1BQU0sR0FBRyx1QkFBUyxDQUFDLElBQUksQ0FBYSxNQUFNLENBQUMsQ0FBQztJQUNyRCxDQUFDO0lBRU0sYUFBYSxDQUFDLEtBQXlCO1FBQzFDLElBQUksTUFBTSxHQUFHLElBQUksR0FBRyxFQUFtQixDQUFDO1FBQ3hDLElBQUksTUFBTSxHQUFHLElBQUksR0FBRyxDQUFxQixJQUFJLENBQUMsWUFBWSxDQUFDLENBQUM7UUFFNUQsS0FBSyxDQUFDLE9BQU8sQ0FBQyxDQUFDLEVBQVUsRUFBRSxHQUFZLEVBQUUsRUFBRTtZQUN2QyxJQUFJLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEVBQUU7Z0JBQzVCLE1BQU0sQ0FBQyxHQUFHLENBQUMsRUFBRSxFQUFFLEdBQUcsQ0FBQyxDQUFDO2FBQ3ZCO1lBQ0QsTUFBTSxDQUFDLE1BQU0sQ0FBQyxFQUFFLENBQUMsQ0FBQztRQUN0QixDQUFDLENBQUMsQ0FBQztRQUVILE1BQU0sQ0FBQyxPQUFPLENBQUMsQ0FBQyxHQUFZLEVBQUUsRUFBVSxFQUFFLEVBQUUsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLEVBQUUsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDO1FBQ3pFLE1BQU0sQ0FBQyxPQUFPLENBQUMsQ0FBQyxHQUFlLEVBQUUsRUFBVSxFQUFFLEVBQUUsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLEVBQUUsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQ2hGLENBQUM7SUFFRCxZQUFZLENBQUMsRUFBVSxFQUFFLEdBQVk7UUFDakMsSUFBSSxHQUFHLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLE1BQU0sRUFBRSxJQUFJLFdBQVcsQ0FBQyxPQUFPLENBQUMsR0FBRyxDQUFDLENBQUMsRUFBRSxHQUFHLENBQUMsQ0FBQyxFQUFFLEdBQUcsQ0FBQyxDQUFDLENBQUMsRUFBRSxXQUFXLENBQUMsVUFBVSxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsU0FBUyxDQUFlLENBQUM7UUFDM0osSUFBSSxJQUFJLEdBQUcsR0FBRyxDQUFDLFlBQVksU0FBQyxrQkFBUSxFQUFHLENBQUM7UUFDeEMsSUFBSSxDQUFDLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQztRQUVkLElBQUksQ0FBQyxZQUFZLENBQUMsR0FBRyxDQUFDLEVBQUUsRUFBRSxHQUFHLENBQUMsQ0FBQztJQUNuQyxDQUFDO0lBRUQsWUFBWSxDQUFDLEVBQVUsRUFBRSxHQUFlO1FBQ3BDLDJCQUlvK1MsYUFBYyxDQUo5K1MsR0FBRyxFQUFJLElBQUk7WUFBRSx3QkFBVSxDQUFDLGdCQUFnQixDQUFDLEdBQUcsQ0FBQyxDQUFDO1FBQ2xELElBQUksQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDLEVBQUUsQ0FBQyxDQUFDO0lBQ2pDLENBQUM7Q0FFSjtBQXpDRCxpQ0F5Q0MifQ==","assetPath":"Assets/Script/ThemePark/ItemController.ts","manifest":{"properties":[],"name":"ItemController","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 36ad7c40b618d67d56e21613e3736a2e
+  onlyWriteTrigger: 0

@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: f4397de13b1f047428cff03b3ac56fc0
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    MultiplayManager_1 = require(\"./MultiplayManager\");\r\nclass GiftItem extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Init(id) {\r\n        this.id
+    = id;\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        MultiplayManager_1.default.instance.ObtainItem(this.id);\r\n   
+    }\r\n}\r\nexports.default = GiftItem;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2lmdEl0ZW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHaWZ0SXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCx5REFBa0Q7QUFFbEQsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUloRCxJQUFJLENBQUMsRUFBVTtRQUNsQixJQUFJLENBQUMsRUFBRSxHQUFHLEVBQUUsQ0FBQztJQUNqQixDQUFDO0lBRUQsY0FBYyxDQUFDLFFBQWtCO1FBQzdCLDBCQUFnQixDQUFDLFFBQVEsQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO0lBQ2xELENBQUM7Q0FFSjtBQVpELDJCQVlDIn0=","assetPath":"Assets/Script/ThemePark/GiftItem.ts","manifest":{"properties":[],"name":"GiftItem","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 2d0b981b341700c5feb27ff69cc48d1a
+  onlyWriteTrigger: 0
