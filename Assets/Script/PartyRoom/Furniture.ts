@@ -3,7 +3,7 @@ import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import UiController from './UiController';
 import { Transform } from 'UnityEngine';
 import CharacterPlayer from '../Common/CharacterPlayer';
-import AudioController from './AudioController';
+import AudioController from './AudioController';    
 
 export default class Furniture extends ZepetoScriptBehaviour {
 
